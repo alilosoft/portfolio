@@ -9,10 +9,21 @@ body {
 }
 
 .main-header {
-  width: 75%;
-  margin: 15rem auto;
-  padding: 64px;
+  text-align: center;
+}
+
+.container {
+  width: 95%;
+  margin: 2rem auto;
+  /* padding: 64px; */
   border-radius: 16px;
-  box-shadow: 0 24px 48px #0005;
-  background: linear-gradient(#d3f9d8, #d8f5a2);
+  /* box-shadow: 0 24px 48px #0005; */
+}
+
+.hading-hero {
+  font-size: 80px;
+}
+
+.section {
+  margin-bottom: 32px;
 }
