@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  /* (10px / 16px  = 0.625) x 100 = 62.5%  */
+  font-size: 62.5%;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -13,17 +18,26 @@ body {
 }
 
 .container {
-  width: 95%;
+  /* background-color: bisque; */
+  width: 90%;
   margin: 2rem auto;
   /* padding: 64px; */
-  border-radius: 16px;
+  border-radius: 0.8rem;
   /* box-shadow: 0 24px 48px #0005; */
 }
 
-.hading-hero {
-  font-size: 80px;
+p {
+  font-size: 1.6rem;
+}
+
+.hero-greeting {
+  font-size: 2.4rem;
+}
+
+.hero-heading {
+  font-size: 4.8rem;
 }
 
 .section {
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
 }
