@@ -1,43 +1,326 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg: #0f172a;
+    --bg-alt: #1e293b;
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Base Styles */
 html {
-  /* (10px / 16px  = 0.625) x 100 = 62.5%  */
-  font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-main);
+    margin: 0;
+    line-height: 1.6;
 }
 
-.main-header {
-  text-align: center;
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
 }
 
 .container {
-  /* background-color: bisque; */
-  width: 90%;
-  margin: 2rem auto;
-  /* padding: 64px; */
-  border-radius: 0.8rem;
-  /* box-shadow: 0 24px 48px #0005; */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-p {
-  font-size: 1.6rem;
-}
-
-.hero-greeting {
-  font-size: 2.4rem;
-}
-
-.hero-heading {
-  font-size: 4.8rem;
+.max-w-s {
+    max-width: 600px !important;
 }
 
 .section {
-  margin-bottom: 3.2rem;
+    padding: 6rem 0;
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+/* Typography Refinements */
+.gradient-text {
+    font-size: 4rem;
+    background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: background 0.3s, backdrop-filter 0.3s;
+}
+
+.navbar.scrolled {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+}
+
+/* Components Overrides */
+.btn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: var(--primary-hover);
+    border: none;
+}
+
+.btn.primary:hover {
+    background: var(--primary-hover);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-muted);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: var(--transition);
+    backdrop-filter: blur(8px);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.badge {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    padding: 0.25rem 0.75rem;
+    font-weight: 500;
+}
+
+/* Form Styles */
+input,
+textarea {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.75rem;
+    border-radius: 6px;
+    width: 100%;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Helper Classes */
+.flex {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.gap-s {
+    gap: 1rem;
+}
+
+.gap-m {
+    gap: 2rem;
+}
+
+.gap-l {
+    gap: 4rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-m {
+    margin-top: 2rem;
+}
+
+.mb-s {
+    margin-bottom: 1rem;
+}
+
+.p-m {
+    padding: 2rem;
+}
+
+.p-l {
+    padding: 4rem;
+}
+
+.block {
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero .container>* {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero h1 {
+    animation-delay: 0.2s;
+}
+
+.hero p {
+    animation-delay: 0.4s;
+}
+
+.hero .cta-btns {
+    animation-delay: 0.6s;
+}
+
+/* Grid System Overrides (Oat uses display: grid but we can refine) */
+.grid {
+    display: grid;
+    width: 100%;
+}
+
+.grid.col-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+
+    .grid.col-2,
+    .grid.col-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .gradient-text {
+        font-size: 2.5rem;
+    }
+
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
 }

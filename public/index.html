@@ -1,65 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>alilo's Portfolio</title>
-  </head>
-  <body>
-    <header class="main-header">
-      <nav></nav>
-    </header>
-    <section class="container section section-hero">
-      <p class="hero-greeting">Hi 🙋‍♂️</p>
-      <h1 class="hero-heading">I'm Ali (aka: alilo)</h1>
-      <p class="hero-intro">Struggling to become a pro Software Developer</p>
-    </section>
 
-    <section class="container section projects">
-      <h2 class="heading-l2">Projects</h2>
-      <div class="project-card">
-        <h3>Omnifood</h3>
-        <p>Final project in Udemy course HTML & CSS (Jonas)</p>
-        <a
-          href="https://alilosoft.github.io/elbonyan-elmarsos/omnifood/"
-          target="_blank"
-          >Demo</a
-        >
-        <a
-          href="https://github.com/alilosoft/Kalbonyan-Elmarsos/tree/main/02-Udemy/-01-HTML-CSS-Jonas"
-          target="_blank">
-          Code
-        </a>
-      </div>
-      <div class="project-card">
-        <h3>Notes App</h3>
-        <a
-          href="https://alilosoft.github.io/elbonyan-elmarsos/notes-app-old/"
-          target="_blank"
-          >Demo</a
-        >
-      </div>
-      <div class="project-card">
-        <h3>Todos App</h3>
-        <a
-          href="https://alilosoft.github.io/elbonyan-elmarsos/todos-app-old/"
-          target="_blank"
-          >Demo</a
-        >
-      </div>
-      <div>
-        <h3>Hangman Game</h3>
-        <a
-          href="https://alilosoft.github.io/elbonyan-elmarsos/hangman-old/"
-          target="_blank"
-          >Demo</a
-        >
-      </div>
-    </section>
-    <footer class="container">
-      <a href="https://spectrocoin.com/en/payment/donation/de3adc5f-cfb6-48be-8a37-eb248dea6071" style="display:inline-block;padding:14px 24px;font-size:14px;border-radius:4px;font-weight:500;text-decoration:none;font-family:&quot;Red Hat Text&quot;, sans-serif;text-align:center;background-color:#4972F4;color:white"><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500&amp;display=swap" rel="stylesheet"/><span style="display:inline-block;line-height:20px"><img style="vertical-align:bottom;height:18px;width:36px" src="https://spectrocoin.com/pb/spectrocoin_small_white.svg"/>Donate with Crypto</span></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alilosoft | Portfolio</title>
+    <!-- Oat UI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@knadh/oat/oat.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Oat UI JS -->
+    <script src="https://unpkg.com/@knadh/oat/oat.min.js" defer></script>
+</head>
+
+<body data-theme="dark">
+    <nav class="navbar">
+        <div class="container flex space-between items-center">
+            <a href="#" class="logo">alilosoft<span>.</span></a>
+            <ul class="nav-links flex gap-m">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero flex items-center justify-center">
+            <div class="container text-center">
+                <h1 class="gradient-text">Software Engineer</h1>
+                <p class="subtitle">Crafting robus & elegant solutions for the web, mobile & desktop.</p>
+                <div class="cta-btns flex justify-center gap-s">
+                    <a href="#projects" class="btn primary">View Work</a>
+                    <a href="#contact" class="btn secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="grid col-2 gap-l items-center">
+                    <div class="about-content">
+                        <h2>About Me</h2>
+                        <p>Hi, I am <strong>Ali</strong> (aka: alilo), a dedicated software developer passionate
+                            about
+                            building
+                            clean, efficient, and user-centric applications. With a focus on performance and modern
+                            design, I turn complex problems into intuitive experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-alt">
+            <div class="container">
+                <h2 class="text-center">Featured Projects</h2>
+                <div class="grid col-3 gap-m">
+                    <!-- Project 1 -->
+                    <div class="card p-m">
+                        <div class="badge small mb-s">Web App</div>
+                        <h3>E-Commerce Flow</h3>
+                        <p>A seamless shopping experience built with performance in mind.</p>
+                        <a href="#" class="link">View Details &rarr;</a>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="card p-m">
+                        <div class="badge small mb-s">Tooling</div>
+                        <h3>DevProxy</h3>
+                        <p>Local development proxy for simulating network latency and errors.</p>
+                        <a href="#" class="link">View Details &rarr;</a>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="card p-m">
+                        <div class="badge small mb-s">Mobile</div>
+                        <h3>Pulse Fitness</h3>
+                        <p>A mobile app for tracking workout intensity and recovery.</p>
+                        <a href="#" class="link">View Details &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="text-center">Technical Arsenal</h2>
+                <div class="flex wrap justify-center gap-s mt-m">
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">React</span>
+                    <span class="badge">Node.js</span>
+                    <span class="badge">Python</span>
+                    <span class="badge">PostgreSQL</span>
+                    <span class="badge">Docker</span>
+                    <span class="badge">AWS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-alt">
+            <div class="container max-w-s">
+                <h2 class="text-center">Let's Connect</h2>
+                <form class="flex col gap-s mt-m">
+                    <label>
+                        <span>Name</span>
+                        <input type="text" placeholder="Your Name" required>
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" placeholder="Your Email" required>
+                    </label>
+                    <label>
+                        <span>Message</span>
+                        <textarea placeholder="How can I help?" rows="4" required></textarea>
+                    </label>
+                    <button type="submit" class="primary block">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer text-center p-l">
+        <p>&copy; 2026 alilosoft. All rights reserved.</p>
     </footer>
-  </body>
+
+    <script src="main.js"></script>
+</body>
+
 </html>
