@@ -1,5 +1,7 @@
 # Alilo's Portfolio
 
-Deployed at https://alilosoft.dev
+### Deployed at:
 
-Firebase Hosting: https://alilo-portfolio.firebaseapp.com/
+- GitHub Pages : https://alilosoft.github.io/portfolio
+
+- Firebase Hosting: https://alilo-portfolio.firebaseapp.com
