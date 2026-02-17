@@ -1,5 +1,5 @@
 # Alilo's Portfolio
-~~Accessible at: [alilosoft.dev](https://alilosoft.dev)~~
+Accessible at: [alilosoft.dev](https://alilosoft.dev)
 
 ### Deployed at:
 
