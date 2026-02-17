@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "alilosoft",
-    "public": "public-old",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
